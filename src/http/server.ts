@@ -1,8 +1,16 @@
 import fastify from 'fastify'
+import cookie from '@fastify/cookie'
 import { createPoll } from './routes/create-poll'
 import { getPoll } from './routes/get-poll'
+import { voteOnPoll } from './routes/vote-on-poll'
 
 const app = fastify()
+
+app.register(cookie, {
+  secret: "polls-app-nlw",
+  hook: 'onRequest', 
+  parseOptions: {}  
+})
 
 app.listen({ port: 3333 }).then(() => {
   console.log('server running on port :3333')
@@ -10,9 +18,7 @@ app.listen({ port: 3333 }).then(() => {
 
 app.register(createPoll)
 app.register(getPoll)
-
-// https
-// post polls/:id/votes
+app.register(voteOnPoll)
 
 //websocket
 //results
