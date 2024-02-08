@@ -92,3 +92,16 @@ Add a vote to specific poll.
 }
 ```
 
+## WebSockets
+
+### ws `/polls/:pollId/results`
+
+#### Message
+
+```json
+{
+  "pollOptionId": "da9601cc-0b58-4395-8865-113cbdc42089",
+  "votes": 2
+}
+```
+
