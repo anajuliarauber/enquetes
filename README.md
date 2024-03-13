@@ -25,7 +25,7 @@ Create a new poll.
 
 ```json
 {
-  "title": "Qual a melhor linguagem de programação?",
+  "title": "What is your favorite programming language?",
   "options": [
     "JavaScript",
     "Java",
@@ -53,7 +53,7 @@ Return data from a single poll.
 {
 	"poll": {
 		"id": "e4365599-0205-4429-9808-ea1f94062a5f",
-		"title": "Qual a melhor linguagem de programação?",
+		"title": "What is your favorite programming language?",
 		"options": [
 			{
 				"id": "4af3fca1-91dc-4c2d-b6aa-897ad5042c84",
